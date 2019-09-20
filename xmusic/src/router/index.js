@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import xheader from '../components/xheader/xheader'
 import recommend from '../components/recommend/recommend'
 import singer from '../components/singer/singer'
 import rank from '../components/rank/rank'
@@ -12,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'xheader',
-      component: xheader
+      name: 'recommend',
+      component: recommend
     },
     {
       path: '/recommend',
