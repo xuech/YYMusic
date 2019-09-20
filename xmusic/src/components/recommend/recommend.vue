@@ -5,14 +5,24 @@
 </template>
 
 <script>
+import { getRecommend } from '../../api/recommend'
+
 export default {
   name: 'recommend',
   data () {
     return {}
   },
-  methods: {},
+  methods: {
+    getData () {
+      getRecommend().then((res) => {
+        if (res.code === 0) {
+          console.log(res.data.slider)
+        }
+      })
+    }
+  },
   mounted () {
-
+    this.getData()
   }
 
 }
