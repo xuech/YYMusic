@@ -17,7 +17,6 @@ export default {
   },
   methods: {},
   mounted () {
-    console.log("xxx")
 
   },
   computed: {
