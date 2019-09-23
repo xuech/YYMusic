@@ -24,6 +24,9 @@
           </li>
         </ul>
       </div>
+      <div class="list-fixed" ref="fixed" v-show="fixedTitle">
+        <div class="fixed-title">{{fixedTitle}} </div>
+      </div>
     </scroll>
 </template>
 
@@ -77,7 +80,7 @@ export default {
       }
       // 当滚动到底部，且-newY大于最后一个元素的上限
       this.currentIndex = listHeight.length - 2
-    },
+    }
   },
   methods: {
     // 点选
@@ -134,6 +137,12 @@ export default {
       return this.data.map((group) => {
         return group.title.substr(0, 1)
       })
+    },
+    fixedTitle () {
+      if (this.scrollY > 0) {
+        return ''
+      }
+      return this.data[this.currentIndex] ? this.data[this.currentIndex].title : ''
     }
   }
 
