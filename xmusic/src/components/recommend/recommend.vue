@@ -43,7 +43,7 @@ import {getRecommend, getDiscList} from 'api/recommend'
 // import {mapMutations} from 'vuex'
 
 export default {
-  //mixins: [playlistMixin],
+  // mixins: [playlistMixin],
   components: {
     Slider,
     // Loading,
@@ -91,7 +91,7 @@ export default {
           this.discList = res.data.list
         }
       })
-    },
+    }
     // ...mapMutations({
     //   setDisc: 'SET_DISC'
     // })

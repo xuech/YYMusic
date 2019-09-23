@@ -70,7 +70,7 @@ export default {
         return a.title.charCodeAt(0) - b.title.charCodeAt(0)
       })
       return hot.concat(ret)
-    },
+    }
   },
   mounted () {
     this.getSingerList()

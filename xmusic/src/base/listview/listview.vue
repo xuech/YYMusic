@@ -124,7 +124,7 @@ export default {
     },
     scroll (pos) {
       this.scrollY = pos.y
-    },
+    }
   },
   created () {
     this.touch = {}
