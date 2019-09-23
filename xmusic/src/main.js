@@ -5,8 +5,15 @@ import App from './App'
 import router from './router'
 import 'common/stylus/index.styl'
 import fastClick from 'fastclick'
+import VueLazyLoad from 'vue-lazyload'
 
 Vue.config.productionTip = false
+Vue.use(VueLazyLoad)
+Vue.use(VueLazyLoad, {
+  preLoad: 1.3,
+  loading: require('common/image/default.png'),
+  attempt: 1
+})
 
 fastClick.attach(document.body)
 

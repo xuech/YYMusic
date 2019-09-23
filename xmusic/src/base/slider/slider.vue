@@ -77,7 +77,7 @@ export default {
         child.style.width = sliderWidth + 'px'
         width += sliderWidth
       }
-      // if (this.loop) {
+      // if (this.loop && !isResize) {
       //   width += 2 * sliderWidth
       // }
       this.$refs.sliderGroup.style.width = width + 'px'
@@ -95,12 +95,10 @@ export default {
 
       this.slider.on('scrollEnd', () => {
         let pageIndex = this.slider.getCurrentPage().pageX
-        // if (this.loop) {
-        //   pageIndex -= 1
-        // }
+        if (this.loop) {
+          pageIndex -= 1
+        }
         this.currentPageIndex = pageIndex
-        console.log('pageIndex',pageIndex)
-        console.log('currentPageIndex',this.currentPageIndex)
 
         if (this.autoPlay) {
           this.play()
@@ -117,7 +115,6 @@ export default {
       this.dots = new Array(this.children.length)
     },
     play () {
-      console.log('play---currentPageIndex',this.currentPageIndex)
       let pageIndex = this.currentPageIndex
       if (this.loop) {
         pageIndex += 1
@@ -135,7 +132,6 @@ export default {
 
   .slider
     min-height: 1px
-    position: relative
     .slider-group
       position: relative
       overflow: hidden
