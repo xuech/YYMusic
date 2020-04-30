@@ -41,7 +41,7 @@
 
 <script type="text/ecmascript-6">
 import Slider from 'base/slider/slider'
-// import dayjs from 'dayjs'
+import dayjs from 'dayjs'
 // import Loading from 'base/loading/loading'
 import Scroll from 'base/scroll/scroll'
 import { getRecommend, getDiscList } from 'api/recommend'
@@ -63,12 +63,11 @@ export default {
   },
   created () {
     this._getRecommend()
-
     this._getDiscList()
     // 当前日期前一个月
-    // console.log('day', dayjs().subtract(1, 'month').format('YYYY-MM-DD'))
+    console.log('day', dayjs().subtract(1, 'month').format('YYYY-MM-DD'))
     // 当前日期后90天
-    // console.log('day2', dayjs().add('90', 'day').format('YYYY-MM-DD'))
+    console.log('day2', dayjs().add('90', 'day').format('YYYY-MM-DD'))
   },
   methods: {
     handlePlaylist (playlist) {
