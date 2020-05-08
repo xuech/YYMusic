@@ -18,12 +18,10 @@ export default {
   methods: {},
   mounted () {
     console.log('player')
-    console.log('我修改了新bug')
 
   },
   created(){
     console.log('xx')
-
   },
   computed: {
     ...mapGetters([
