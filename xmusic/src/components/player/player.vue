@@ -21,6 +21,9 @@ export default {
     console.log('我修改了新bug')
 
   },
+  created(){
+
+  },
   computed: {
     ...mapGetters([
       'fullScreen',
