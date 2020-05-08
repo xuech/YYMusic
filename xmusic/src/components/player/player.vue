@@ -22,6 +22,7 @@ export default {
 
   },
   created(){
+    console.log('xx')
 
   },
   computed: {
