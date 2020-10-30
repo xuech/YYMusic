@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'player',
@@ -18,9 +18,8 @@ export default {
   methods: {},
   mounted () {
     console.log('player')
-
   },
-  created(){
+  created () {
     console.log('xx')
   },
   computed: {
@@ -33,16 +32,18 @@ export default {
 </script>
 
 <style lang="stylus" scoped rel="stylesheet/stylus">
-  @import "~common/stylus/variable"
-  @import "~common/stylus/mixin"
-  .player
-    .normal-player
-      position fixed
-      left 0
-      right 0
-      top 0
-      bottom 0
-      z-index 150
-      background $color-background
+@import '~common/stylus/variable';
+@import '~common/stylus/mixin';
 
+.player {
+  .normal-player {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 150;
+    background: $color-background;
+  }
+}
 </style>
